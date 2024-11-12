@@ -19,11 +19,11 @@ export function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-500 transition duration-300"
+                  className="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-500 transition duration-300 transform hover:scale-110" // Added hover:scale-110 for pop-out effect
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="h-6 w-6" /> {/* Increased size */}
                   <span className="sr-only">{social.name}</span>
                 </a>
               ))}
