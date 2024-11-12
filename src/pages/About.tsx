@@ -1,4 +1,4 @@
-import { BookOpen, GraduationCap, Users } from 'lucide-react';
+import { BookOpen, GraduationCap, Users, User, Lightbulb, RefreshCw, Shield, Clock } from 'lucide-react';
 
 export function About() {
   return (
@@ -12,13 +12,14 @@ export function About() {
                 About NotesNeo
               </h1>
               <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                We're on a mission to make quality education accessible to everyone. Our platform provides carefully curated academic notes to help students excel in their studies.
+              NotesNeo was founded with a simple yet powerful mission: to make quality education accessible to every student. We believe that access to comprehensive study materials shouldn't be a barrier to academic success.
+              <br></br><br></br>Through our platform, we're building a community where students can easily find, share, and learn from well-organized academic resources.
               </p>
             </div>
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="https://i.ibb.co/W2rp6sg/notesneo.jpg"
                 alt="Students collaborating"
               />
             </div>
@@ -58,17 +59,47 @@ export function About() {
 const values = [
   {
     name: 'Quality Education',
-    description: 'We ensure all our notes meet the highest academic standards.',
+    description: 'We provide high-quality notes that help students learn effectively.',
     icon: GraduationCap,
   },
   {
     name: 'Accessibility',
-    description: 'Making education accessible to students everywhere.',
+    description: 'We make sure students can access our resources anytime and anywhere.',
     icon: BookOpen,
   },
   {
     name: 'Community',
-    description: 'Building a supportive community of learners.',
+    description: 'We build a strong community where students can support each other.',
     icon: Users,
+  },
+  {
+    name: 'Innovation',
+    description: 'We keep improving and offering new resources to help students grow.',
+    icon: Lightbulb,
+  },
+  {
+    name: 'Student-Centered',
+    description: 'Our resources are designed to meet the needs of each student.',
+    icon: User,
+  },
+  {
+    name: 'Continuous Improvement',
+    description: 'We always work to make our resources better for students.',
+    icon: RefreshCw,
+  },
+  {
+    name: 'Integrity',
+    description: 'We offer honest and trustworthy resources students can rely on.',
+    icon: Shield,
+  },
+  {
+    name: 'Collaboration',
+    description: 'We encourage students to work together and share knowledge.',
+    icon: Users,
+  },
+  {
+    name: 'Time Efficiency',
+    description: 'We help students save time by providing well-organized and focused resources.',
+    icon: Clock,
   },
 ];

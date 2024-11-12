@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useState } from 'react';
 
 export function Contact() {
@@ -116,7 +116,7 @@ export function Contact() {
                   type="submit"
                   className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Send Message
+                  <Send className="h-5 w-5 mr-2" aria-hidden="true" /> Send Message
                 </button>
               </div>
             </form>
@@ -130,17 +130,17 @@ export function Contact() {
 const contactMethods = [
   {
     name: 'Email',
-    description: 'support@notesneo.com',
+    description: 'deepakmodi8676@gmail.com',
     icon: Mail,
   },
   {
     name: 'Phone',
-    description: '+1 (555) 123-4567',
+    description: '+91 86768 42176',
     icon: Phone,
   },
   {
     name: 'Office',
-    description: '123 Education Street, Learning City, 12345',
+    description: '119 Old Hostel, SAITM Gurgaon, 122506',
     icon: MapPin,
   },
 ];
