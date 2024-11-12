@@ -1,4 +1,4 @@
-import { Download, Users, BookOpen, Star } from 'lucide-react';
+import { Download, Users, BookOpen, Star, ArrowRight, Smartphone, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Home() {
@@ -9,7 +9,7 @@ export function Home() {
       <div className="lg:absolute lg:inset-y-0 lg:right-32 lg:w-[33%]">
         <img
           className="w-full h-auto object-contain sm:h-72 md:h-96 lg:h-full"
-          src="https://i.ibb.co/PMvLzz8/rb-173324-1.png"
+          src="https://i.ibb.co/z7j55FV/hero.png"
           alt="Students studying"
         />
       </div>
@@ -44,7 +44,7 @@ export function Home() {
                       className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download App
+                      Download Android App
                     </a>
                   </div>
                 </div>
@@ -81,6 +81,23 @@ export function Home() {
           </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+            Ready to Excel in Your Studies?
+          </h2>
+          <Link
+            to="/notes"
+            className="inline-flex items-center px-6 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 mt-6"
+          >
+            Browse Notes
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+
     </div>
   );
 }
@@ -104,6 +121,16 @@ const features = [
   {
     name: 'Personalized Study Resources',
     description: 'Save favorite notes for quick access and create a customized study library.',
-    icon: Star, // You can add a different icon here
+    icon: Star,
+  },
+  {
+    name: 'Multi-Device Access',
+    description: 'Access your notes and study materials on any device.',
+    icon: Smartphone,
+  },
+  {
+    name: 'Updated Content',
+    description: 'Stay up-to-date with the latest notes and resources for your studies.',
+    icon: RefreshCw,
   },
 ];
