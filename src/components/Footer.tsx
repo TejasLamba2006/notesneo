@@ -23,10 +23,10 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Quick Links - Force Row Layout on All Screen Sizes */}
+          {/* Quick Links - Adjusted Resources Alignment */}
           <div className="flex flex-row space-x-8 col-span-1 md:col-span-2">
-            {footerLinks.map((section) => (
-              <div key={section.title} className="flex-1">
+            {footerLinks.map((section, index) => (
+              <div key={section.title} className={`flex-1 ${index === 0 ? 'pl-8 md:pl-6 lg:pl-8' : ''}`}>
                 <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
                   {section.title}
                 </h3>
