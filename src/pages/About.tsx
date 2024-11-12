@@ -4,16 +4,27 @@ export function About() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
-      <div className="relative py-16 sm:py-24">
+      <div className="text-center mb-8 mt-16"> {/* Added mt-16 to push content below navbar */}
+        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+          About NotesNeo
+        </h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Empowering students with comprehensive academic resources and a supportive learning community.
+        </p>
+      </div>
+
+      {/* Mission Section */}
+      <div className="relative py-8 sm:py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                About NotesNeo
+              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl">
+                Our Mission
               </h1>
               <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              NotesNeo was founded with a simple yet powerful mission: to make quality education accessible to every student. We believe that access to comprehensive study materials shouldn't be a barrier to academic success.
-              <br></br><br></br>Through our platform, we're building a community where students can easily find, share, and learn from well-organized academic resources.
+                NotesNeo was founded with a simple yet powerful mission: to make quality education accessible to every student. We believe that access to comprehensive study materials shouldn't be a barrier to academic success.
+                <br /><br />
+                Through our platform, we're building a community where students can easily find, share, and learn from well-organized academic resources.
               </p>
             </div>
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
@@ -26,6 +37,7 @@ export function About() {
           </div>
         </div>
       </div>
+
 
       {/* Values Section */}
       <div className="bg-white dark:bg-gray-800 py-16 sm:py-24">
