@@ -13,10 +13,20 @@ export function About() {
         </p>
       </div>
 
+      {/* Image Section - For both Small and Large Screens */}
+      <div className="mt-8 sm:mt-8 lg:mt-0 sm:max-w-lg sm:mx-auto lg:hidden sm:flex justify-center p-6"> {/* Added p-4 for padding */}
+        <img
+          className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
+          src="https://i.ibb.co/W2rp6sg/notesneo.jpg"
+          alt="Students collaborating"
+        />
+      </div>
+
       {/* Mission Section */}
       <div className="relative py-8 sm:py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+            {/* Mission Text */}
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl">
                 Our Mission
@@ -25,9 +35,13 @@ export function About() {
                 NotesNeo was founded with a simple yet powerful mission: to make quality education accessible to every student. We believe that access to comprehensive study materials shouldn't be a barrier to academic success.
                 <br /><br />
                 Through our platform, we're building a community where students can easily find, share, and learn from well-organized academic resources.
+                <br /><br />
+                We continuously enhance our resources to support students’ academic and personal success.
               </p>
             </div>
-            <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+
+            {/* Image for Large Screens */}
+            <div className="hidden lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
                 src="https://i.ibb.co/W2rp6sg/notesneo.jpg"
@@ -37,7 +51,6 @@ export function About() {
           </div>
         </div>
       </div>
-
 
       {/* Values Section */}
       <div className="bg-white dark:bg-gray-800 py-16 sm:py-24">

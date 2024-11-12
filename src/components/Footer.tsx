@@ -87,33 +87,33 @@ export function Footer() {
 
 const socialLinks = [
   {
-    name: 'Facebook',
-    href: 'https://facebook.com',
-    icon: Facebook,
-  },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com',
-    icon: Instagram,
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com',
-    icon: Twitter,
-  },
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com',
-    icon: Linkedin,
-  },
-  {
     name: 'GitHub',
-    href: 'https://github.com',
+    href: 'https://github.com/decodewithdeepak',
     icon: Github,
   },
   {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/deepakmodi1/',
+    icon: Linkedin,
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/deepakmodi_io',
+    icon: Twitter,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/deepakmodi.io/',
+    icon: Instagram,
+  },
+  {
+    name: 'Facebook',
+    href: 'https://m.facebook.com/deepak.modi.313924',
+    icon: Facebook,
+  },
+  {
     name: 'Email',
-    href: 'mailto:support@notesneo.com',
+    href: 'mailto:deepakmodi8676.com',
     icon: Mail,
   },
 ];

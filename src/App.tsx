@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
+import { Login } from './pages/Login';
 import { Notes } from './pages/Notes';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/notes" element={<Notes />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <Footer />
