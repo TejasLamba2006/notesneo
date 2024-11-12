@@ -3,59 +3,78 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 gap-8">
+
           {/* Brand Section */}
           <div className="col-span-1">
-            <Link to="/" className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 transition duration-300">
+            <Link to="/" className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition duration-300">
               NotesNeo
             </Link>
             <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-              Empowering students with high-quality academic resources for better learning outcomes.
+              Empowering students with high-quality academic resources for better learning outcomes and community support.
             </p>
-            <div className="mt-6 flex space-x-4">
+            <Link
+              to="/about"
+              className="text-indigo-500 dark:text-indigo-300 hover:text-indigo-700 dark:hover:text-indigo-400 mt-4 block text-sm transition duration-300"
+            >
+              Learn more about us
+            </Link>
+          </div>
+
+          {/* Quick Links - Force Row Layout on All Screen Sizes */}
+          <div className="flex flex-row space-x-8 col-span-1 md:col-span-2">
+            {footerLinks.map((section) => (
+              <div key={section.title} className="flex-1">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                  {section.title}
+                </h3>
+                <ul className="space-y-4">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        to={link.href}
+                        className="text-base text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Connect Section */}
+          <div className="col-span-1">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+              Connect
+            </h3>
+            <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-500 transition duration-300 transform hover:scale-110" // Added hover:scale-110 for pop-out effect
+                  className="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-500 transition duration-300 transform hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <social.icon className="h-6 w-6" /> {/* Increased size */}
+                  <social.icon className="h-8 w-8" />
                   <span className="sr-only">{social.name}</span>
                 </a>
               ))}
             </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+              Follow us on social media for updates and resources.
+            </p>
           </div>
-
-          {/* Quick Links */}
-          {footerLinks.map((section) => (
-            <div key={section.title} className="col-span-1">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
-                {section.title}
-              </h3>
-              <ul className="mt-4 space-y-4">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className="text-base text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
 
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-base text-gray-500 dark:text-gray-400">
+            <p className="text-base text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300 cursor-pointer">
               © {new Date().getFullYear()} NotesNeo. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
@@ -72,10 +91,16 @@ export function Footer() {
                 Terms of Service
               </Link>
               <Link
-                to="/cookies"
+                to="/about"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300"
               >
-                Cookie Policy
+                About Us
+              </Link>
+              <Link
+                to="/contact"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300"
+              >
+                Contact Us
               </Link>
             </div>
           </div>
@@ -126,15 +151,6 @@ const footerLinks = [
       { name: 'Study Tips', href: '/study-tips' },
       { name: 'Downloads', href: '/downloads' },
       { name: 'Blog', href: '/blog' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Press Kit', href: '/press' },
     ],
   },
   {
