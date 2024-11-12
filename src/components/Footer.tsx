@@ -46,12 +46,12 @@ export function Footer() {
             ))}
           </div>
 
-          {/* Connect Section */}
-          <div className="col-span-1">
+          {/* Connect Section - Centered on small devices */}
+          <div className="col-span-1 flex flex-col items-center md:items-start md:text-left text-center">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
               Connect
             </h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center md:justify-start">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
