@@ -9,11 +9,11 @@ interface NoteCardProps {
 
 export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all transform hover:scale-[1.05] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-700 duration-300 ease-in-out">
       <img
         src={note.imageUrl}
         alt={note.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-100 object-cover"
       />
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -39,7 +39,7 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
                   isSaved
                     ? 'bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
-                }`}
+                } hover:bg-pink-200 dark:hover:bg-pink-700 transition-colors duration-200`}
               >
                 <svg
                   className="w-5 h-5"
@@ -58,10 +58,10 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
             )}
             <a
               href={note.downloadUrl}
-              className="p-2 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
+              className="p-2 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 hover:bg-green-300 dark:hover:bg-green-700 transition-all duration-200 ease-in-out"
               download
             >
-              <Download className="w-5 h-5" />
+              <Download className="w-5 h-5 transition-transform transform hover:scale-110" />
             </a>
           </div>
         </div>
