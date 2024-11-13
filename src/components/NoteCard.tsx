@@ -32,6 +32,9 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
           <span className="px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200">
             Semester {note.semester}
           </span>
+          <span className="px-3 py-1 text-xs font-semibold rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200">
+            Unit {note.unit}
+          </span>
         </div>
         <div className="mt-6 flex justify-between items-center">
           {onSave && (
