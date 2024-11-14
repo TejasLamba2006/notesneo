@@ -174,7 +174,7 @@ const teamMembers = [
     name: 'Deepak Modi',
     role: 'Founder & Lead Developer',
     description: 'Full-stack developer with a passion for education technology.',
-    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    image: 'https://i.ibb.co/fxHpNCX/deepak-modi.jpg',
     social: {
       github: 'https://github.com/decodewithdeepak',
       linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
@@ -185,18 +185,18 @@ const teamMembers = [
     name: 'Deepak Modi',
     role: 'Content Manager',
     description: 'Expert in creating and curating high-quality academic content.',
-    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    image: 'https://i.ibb.co/fxHpNCX/deepak-modi.jpg',
     social: {
       github: 'https://github.com/decodewithdeepak',
       linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
-      twitter: 'https://twitter.com/deepakmodi_io'
+      twitter: 'https://i.ibb.co/fxHpNCX/deepak-modi.jpg'
     }
   },
   {
     name: 'Deepak Modi',
     role: 'UI/UX Designer',
     description: 'Creative designer focused on user-friendly educational interfaces.',
-    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    image: 'https://i.ibb.co/fxHpNCX/deepak-modi.jpg',
     social: {
       github: 'https://github.com/decodewithdeepak',
       linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
@@ -207,7 +207,7 @@ const teamMembers = [
     name: 'Deepak Modi',
     role: 'Community Manager',
     description: 'Building and nurturing the NotesNeo student community.',
-    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    image: 'https://i.ibb.co/fxHpNCX/deepak-modi.jpg',
     social: {
       github: 'https://github.com/decodewithdeepak',
       linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
