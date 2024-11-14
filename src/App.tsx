@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { About } from './pages/About';
@@ -7,11 +8,22 @@ import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Notes } from './pages/Notes';
 
+function ScrollToTopOnRouteChange() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
         <Navbar />
+        <ScrollToTopOnRouteChange />
         <div className="flex-grow pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
