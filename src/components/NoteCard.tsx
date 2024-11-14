@@ -64,7 +64,8 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
           <a
             href={note.downloadUrl}
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg"
-            download
+            // download
+            target="_blank" // open in new tab
           >
             <Download className="w-4 h-4" />
             <span className="text-sm font-medium">Download</span>

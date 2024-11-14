@@ -1,10 +1,10 @@
-import { BookOpen, GraduationCap, Users, User, Lightbulb, RefreshCw, Shield, Clock } from 'lucide-react';
+import { BookOpen, GraduationCap, Users, User, Lightbulb, RefreshCw, Shield, Clock, Github, Linkedin, Twitter } from 'lucide-react';
 
 export function About() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
-      <div className="text-center mb-8 mt-16"> {/* Added mt-16 to push content below navbar */}
+      <div className="text-center mb-8 mt-16">
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
           About NotesNeo
         </h1>
@@ -14,7 +14,7 @@ export function About() {
       </div>
 
       {/* Image Section - For both Small and Large Screens */}
-      <div className="mt-8 sm:mt-8 lg:mt-0 sm:max-w-lg sm:mx-auto lg:hidden sm:flex justify-center p-6"> {/* Added p-4 for padding */}
+      <div className="mt-8 sm:mt-8 lg:mt-0 sm:max-w-lg sm:mx-auto lg:hidden sm:flex justify-center p-6">
         <img
           className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
           src="https://i.ibb.co/W2rp6sg/notesneo.jpg"
@@ -36,7 +36,7 @@ export function About() {
                 <br /><br />
                 Through our platform, we're building a community where students can easily find, share, and learn from well-organized academic resources.
                 <br /><br />
-                We continuously enhance our resources to support students’ academic and personal success.
+                We continuously enhance our resources to support students' academic and personal success.
               </p>
             </div>
 
@@ -70,10 +70,55 @@ export function About() {
                     <value.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-white">{value.name}</p>
-                  <p className="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">{value.description}</p>
+                  <p className="ml-16 text-base text-gray-500 dark:text-gray-400">{value.description}</p>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Team Section */}
+      <div className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center mb-12">
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Team</h2>
+            <p className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+              Meet the Minds Behind NotesNeo
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 lg:mx-auto">
+              Dedicated students working together to make education accessible for everyone.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <div className="p-6">
+                  <img
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-indigo-500"
+                    src={member.image}
+                    alt={member.name}
+                  />
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white text-center">{member.name}</h3>
+                  <p className="text-indigo-600 dark:text-indigo-400 text-center mb-4">{member.role}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-center text-sm mb-6">{member.description}</p>
+                  
+                  {/* Social Links */}
+                  <div className="flex justify-center space-x-4">
+                    <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -118,13 +163,55 @@ const values = [
     icon: Shield,
   },
   {
-    name: 'Collaboration',
-    description: 'We encourage students to work together and share knowledge.',
-    icon: Users,
-  },
-  {
     name: 'Time Efficiency',
     description: 'We help students save time by providing well-organized and focused resources.',
     icon: Clock,
   },
+];
+
+const teamMembers = [
+  {
+    name: 'Deepak Modi',
+    role: 'Founder & Lead Developer',
+    description: 'Full-stack developer with a passion for education technology.',
+    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    social: {
+      github: 'https://github.com/decodewithdeepak',
+      linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
+      twitter: 'https://twitter.com/deepakmodi_io'
+    }
+  },
+  {
+    name: 'Deepak Modi',
+    role: 'Content Manager',
+    description: 'Expert in creating and curating high-quality academic content.',
+    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    social: {
+      github: 'https://github.com/decodewithdeepak',
+      linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
+      twitter: 'https://twitter.com/deepakmodi_io'
+    }
+  },
+  {
+    name: 'Deepak Modi',
+    role: 'UI/UX Designer',
+    description: 'Creative designer focused on user-friendly educational interfaces.',
+    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    social: {
+      github: 'https://github.com/decodewithdeepak',
+      linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
+      twitter: 'https://twitter.com/deepakmodi_io'
+    }
+  },
+  {
+    name: 'Deepak Modi',
+    role: 'Community Manager',
+    description: 'Building and nurturing the NotesNeo student community.',
+    image: 'https://i.ibb.co/MSynFMS/deepakmodi.png',
+    social: {
+      github: 'https://github.com/decodewithdeepak',
+      linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
+      twitter: 'https://twitter.com/deepakmodi_io'
+    }
+  }
 ];

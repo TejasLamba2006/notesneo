@@ -47,7 +47,7 @@ export function Contact() {
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                       {method.name}
                     </h3>
-                    <p className="mt-1 text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-gray-400">
                       {method.description}
                     </p>
                   </div>

@@ -1,20 +1,10 @@
 import { Download, Users, BookOpen, Star, ArrowRight, Smartphone, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { TestimonialSlider } from '../components/TestimonialSlider';
 
 export function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-
-      {/* Image Section */}
-      <div className="lg:absolute lg:inset-y-0 lg:right-32 lg:w-[33%]">
-        <img
-          className="w-full h-auto object-contain sm:h-72 md:h-96 lg:h-full"
-          src="https://i.ibb.co/z7j55FV/hero.png"
-          alt="Students studying"
-        />
-      </div>
-
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -51,6 +41,15 @@ export function Home() {
               </div>
             </main>
           </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="lg:absolute lg:inset-y-0 lg:right-32 lg:w-[33%]">
+          <img
+            className="w-full h-auto object-contain sm:h-72 md:h-96 lg:h-full"
+            src="https://i.ibb.co/z7j55FV/hero.png"
+            alt="Students studying"
+          />
         </div>
       </div>
 
@@ -98,6 +97,21 @@ export function Home() {
         </div>
       </div>
 
+      {/* Testimonials Section */}
+      <div className="bg-indigo-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-white">
+              What Our Students Say
+            </h2>
+            <p className="mt-4 text-lg text-indigo-200">
+              Don't just take our word for it - hear from some of our satisfied students
+            </p>
+          </div>
+
+          <TestimonialSlider testimonials={testimonials} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -132,5 +146,50 @@ const features = [
     name: 'Updated Content',
     description: 'Stay up-to-date with the latest notes and resources for your studies.',
     icon: RefreshCw,
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Deepak Modi',
+    title: 'BTech Student',
+    quote: 'NotesNeo has been a game-changer for my studies. The notes are well-organized and easy to understand.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Nitish Modi',
+    title: 'BCA Student',
+    quote: 'The quality of notes and the community support have helped me improve my academic performance significantly.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Sandeep Nandi',
+    title: 'BBA Student',
+    quote: 'I love how easy it is to access and download notes. The mobile app is a great addition!',
+    rating: 4,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Vishal Singh',
+    title: 'BBA Student',
+    quote: 'The platform has made studying much more efficient. I can focus on understanding rather than note-taking.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Shivam Kumar',
+    title: 'BTech Student',
+    quote: 'The subject categorization and unit-wise breakdown makes finding specific topics very convenient.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Preet Raj',
+    title: 'BCA Student',
+    quote: 'NotesNeo has become an essential part of my study routine. Highly recommended!',
+    rating: 4,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
 ];
