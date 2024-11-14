@@ -78,7 +78,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
                 role="group"
                 aria-roledescription="testimonial"
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl h-full">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl h-full">
                   <div className="flex items-center mb-4">
                     <img
                       className="h-12 w-12 rounded-full object-cover"
@@ -101,9 +101,8 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-4 w-4 ${
-                          i < testimonial.rating ? 'fill-current' : 'stroke-current'
-                        }`}
+                        className={`h-4 w-4 ${i < testimonial.rating ? 'fill-current' : 'stroke-current'
+                          }`}
                       />
                     ))}
                   </div>
@@ -124,20 +123,20 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center mt-6 space-x-3">
         {Array.from({ length: Math.ceil(testimonials.length / slidesToShow) }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index * slidesToShow)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              Math.floor(currentIndex / slidesToShow) === index
-                ? 'bg-indigo-600 dark:bg-indigo-400'
-                : 'bg-gray-300 dark:bg-gray-600'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${Math.floor(currentIndex / slidesToShow) === index
+                ? 'bg-white border-indigo-600 shadow-lg scale-125 ring-2 ring-indigo-300'  // Active dot with white background, border, shadow, and glow
+                : 'bg-gray-200 border-gray-400 opacity-80 hover:opacity-100'  // Inactive dot with gray and reduced opacity
+              }`}
             aria-label={`Go to testimonial group ${index + 1}`}
           />
         ))}
       </div>
+
     </div>
   );
 }
