@@ -138,7 +138,7 @@ const socialLinks = [
   },
   {
     name: 'Email',
-    href: 'mailto:deepakmodi8676.com',
+    href: 'mailto:deepakmodi8676@gmail.com',
     icon: Mail,
   },
 ];

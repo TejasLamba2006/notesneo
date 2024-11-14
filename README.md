@@ -7,7 +7,7 @@ Welcome to NotesNeo, your go-to platform for academic resources designed to empo
 [![License](https://img.shields.io/badge/license-MIT-yellow)](https://example.com)
 
 ## About NotesNeo
-NotesNeo aims to make quality educational resources available to every student, providing comprehensive notes across various subjects. We focus on building a community where students can share knowledge and support one another on their learning journey.
+NotesNeo 2.0 is a comprehensive platform designed for students of MDU Rohtak to access high-quality academic resources, including notes, study materials, and community support. The website aims to make studying more accessible, efficient, and collaborative by offering a seamless experience for users to download and save notes, interact with the community, and access personalized resources.
 
 ## Features
 - **Comprehensive Notes**: Access in-depth, organized notes across a wide range of topics.
@@ -34,10 +34,10 @@ At NotesNeo, we are driven by these core values:
 - **Vercel**: For hosting and deploying the website.
 
 ## Get Started
-Visit [NotesNeo](https://example.com) to start exploring resources and join our community.
+Visit [NotesNeo](https://notesneo.vercel.app) to start exploring resources and join our community.
 
 ## Contributing
-We welcome contributions! Please read our [CONTRIBUTING.md](https://example.com) for details on our code of conduct, and the process for submitting pull requests.
+We welcome contributions! Please read our [CONTRIBUTING.md](https://notesneo.vercel.app) for details on our code of conduct, and the process for submitting pull requests.
 
 ## FAQ
 **Q: How can I access the notes?**
