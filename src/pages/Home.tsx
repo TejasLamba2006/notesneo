@@ -48,7 +48,7 @@ export function Home() {
           <img
             className="w-full h-auto object-contain sm:h-72 md:h-96 lg:h-full"
             // src="https://i.ibb.co/z7j55FV/hero.png"
-            src="/assets/home.png"
+            src="/assets/home.svg"
             alt="Students studying"
           />
         </div>
