@@ -47,8 +47,8 @@ export function Home() {
         <div className="lg:absolute lg:inset-y-0 lg:right-32 lg:w-[33%]" data-aos="fade-left">
           <img
             className="w-full h-auto object-contain sm:h-72 md:h-96 lg:h-full"
-            src="https://i.ibb.co/z7j55FV/hero.png"
-            // src="./src/assets/home.svg"
+            // src="https://i.ibb.co/z7j55FV/hero.png"
+            src="./src/assets/home.png"
             alt="Students studying"
           />
         </div>
