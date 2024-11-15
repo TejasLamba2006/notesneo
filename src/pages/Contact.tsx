@@ -24,7 +24,7 @@ export function Contact() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center" data-aos="fade-down">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl pt-8">
             Contact Us
           </h2>
           <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">

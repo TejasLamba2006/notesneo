@@ -5,7 +5,7 @@ export function About() {
     <div className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <div className="text-center mb-8 mt-16" data-aos="fade-down">
-        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white pt-8">
           About NotesNeo
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
