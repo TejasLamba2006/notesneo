@@ -57,7 +57,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="mt-12 lg:mt-0 lg:col-span-2" data-aos="fade-left">
+          <div className="mt-12 lg:mt-0 lg:col-span-2" data-aos="fade-right">
             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
