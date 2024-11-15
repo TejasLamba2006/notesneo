@@ -15,7 +15,7 @@ export function Login() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+      <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl" data-aos="zoom-in">
         {/* Header */}
         <div className="text-center">
           <Link 
@@ -39,7 +39,7 @@ export function Login() {
         </div>
 
         {/* Social Login Buttons */}
-        <div className="space-y-3">
+        <div className="space-y-3" data-aos="fade-up" data-aos-delay="100">
           <button
             type="button"
             className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"

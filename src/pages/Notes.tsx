@@ -36,7 +36,7 @@ export function Notes() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-8 pb-8">
       <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8" data-aos="fade-down">
           <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
             Academic Notes
           </h1>
@@ -45,7 +45,7 @@ export function Notes() {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6" data-aos="fade-up">
           <FilterBar
             selectedBranch={selectedBranch}
             selectedSemester={selectedSemester}
@@ -60,7 +60,7 @@ export function Notes() {
         {showHeroSection ? (
           <div className="mt-12">
             {/* Course Selection Guide */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Select Your Course
               </h2>
@@ -71,7 +71,7 @@ export function Notes() {
 
             {/* Course Features */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="flex items-center justify-center w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full mb-4 mx-auto">
                   <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
@@ -83,7 +83,7 @@ export function Notes() {
                 </p>
               </div>
 
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="flex items-center justify-center w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full mb-4 mx-auto">
                   <Book className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
@@ -95,7 +95,7 @@ export function Notes() {
                 </p>
               </div>
 
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
                 <div className="flex items-center justify-center w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full mb-4 mx-auto">
                   <ScrollText className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
@@ -109,7 +109,7 @@ export function Notes() {
             </div>
 
             {/* Instructions */}
-            <div className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+            <div className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="400">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 How to Access Notes
               </h3>
@@ -123,20 +123,21 @@ export function Notes() {
           </div>
         ) : (
           filteredNotes.length === 0 ? (
-            <div className="text-center py-12">
+            <div className="text-center py-12" data-aos="fade-up">
               <p className="text-xl text-gray-600 dark:text-gray-400">
                 No notes found matching your criteria. Try adjusting your filters.
               </p>
             </div>
           ) : (
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8">
-              {filteredNotes.map((note) => (
-                <NoteCard
-                  key={note.id}
-                  note={note}
-                  onSave={() => { }}
-                  isSaved={false}
-                />
+              {filteredNotes.map((note, index) => (
+                <div key={note.id} data-aos="fade-up" data-aos-delay={index * 100}>
+                  <NoteCard
+                    note={note}
+                    onSave={() => { }}
+                    isSaved={false}
+                  />
+                </div>
               ))}
             </div>
           )
@@ -171,7 +172,6 @@ const notes: Note[] = [
     imageUrl: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb',
     downloadUrl: 'https://example.com/notes/phy101',
   },
-
 
   // BTech Semester 3 - Python
   {
@@ -402,7 +402,6 @@ const notes: Note[] = [
     imageUrl: 'https://i.ibb.co/9v7zMDS/eco3.jpg',
     downloadUrl: 'https://docs.google.com/document/d/1rMk2uzaP_AumU1XW8zwzziQhhJ1ozzkaYNv8b-xFpQU/edit',
   },
-
 
   // BCA Semester 1
   {

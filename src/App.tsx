@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { About } from './pages/About';
@@ -18,13 +20,22 @@ function ScrollToTopOnRouteChange() {
   return null;
 }
 
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
-        <Navbar />
         <ScrollToTopOnRouteChange />
-        <div className="flex-grow pt-16">
+        <Navbar />
+        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

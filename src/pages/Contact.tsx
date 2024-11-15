@@ -23,7 +23,7 @@ export function Contact() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center">
+        <div className="text-center" data-aos="fade-down">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
             Contact Us
           </h2>
@@ -36,8 +36,8 @@ export function Contact() {
           {/* Contact Information */}
           <div>
             <div className="space-y-8">
-              {contactMethods.map((method) => (
-                <div key={method.name} className="flex items-start">
+              {contactMethods.map((method, index) => (
+                <div key={method.name} className="flex items-start" data-aos="fade-right" data-aos-delay={index * 100}>
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                       <method.icon className="h-6 w-6" aria-hidden="true" />
@@ -57,7 +57,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="mt-12 lg:mt-0 lg:col-span-2">
+          <div className="mt-12 lg:mt-0 lg:col-span-2" data-aos="fade-left">
             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">

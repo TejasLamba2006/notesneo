@@ -4,7 +4,7 @@ export function About() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
-      <div className="text-center mb-8 mt-16">
+      <div className="text-center mb-8 mt-16" data-aos="fade-down">
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
           About NotesNeo
         </h1>
@@ -14,7 +14,7 @@ export function About() {
       </div>
 
       {/* Image Section - For both Small and Large Screens */}
-      <div className="mt-8 sm:mt-8 lg:mt-0 sm:max-w-lg sm:mx-auto lg:hidden sm:flex justify-center p-6">
+      <div className="mt-8 sm:mt-8 lg:mt-0 sm:max-w-lg sm:mx-auto lg:hidden sm:flex justify-center p-6" data-aos="zoom-in">
         <img
           className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
           src="https://i.ibb.co/W2rp6sg/notesneo.jpg"
@@ -27,7 +27,7 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             {/* Mission Text */}
-            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left" data-aos="fade-right">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl">
                 Our Mission
               </h1>
@@ -41,7 +41,7 @@ export function About() {
             </div>
 
             {/* Image for Large Screens */}
-            <div className="hidden lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <div className="hidden lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center" data-aos="fade-left">
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5"
                 src="https://i.ibb.co/W2rp6sg/notesneo.jpg"
@@ -55,7 +55,7 @@ export function About() {
       {/* Values Section */}
       <div className="bg-white dark:bg-gray-800 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
+          <div className="lg:text-center" data-aos="fade-up">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Values</h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
               What drives us forward
@@ -64,8 +64,8 @@ export function About() {
 
           <div className="mt-10">
             <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
-              {values.map((value) => (
-                <div key={value.name} className="relative">
+              {values.map((value, index) => (
+                <div key={value.name} className="relative" data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                     <value.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
@@ -81,7 +81,7 @@ export function About() {
       {/* Team Section */}
       <div className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center mb-12">
+          <div className="lg:text-center mb-12" data-aos="fade-up">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Team</h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
               Meet the Minds Behind NotesNeo
@@ -92,8 +92,13 @@ export function About() {
           </div>
 
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            {teamMembers.map((member) => (
-              <div key={member.name} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            {teamMembers.map((member, index) => (
+              <div
+                key={member.name}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="p-6">
                   <img
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-indigo-500"
@@ -189,7 +194,7 @@ const teamMembers = [
     social: {
       github: 'https://github.com/decodewithdeepak',
       linkedin: 'https://www.linkedin.com/in/deepakmodi1/',
-      twitter: 'https://i.ibb.co/fxHpNCX/deepak-modi.jpg'
+      twitter: 'https://twitter.com/deepakmodi_io'
     }
   },
   {
