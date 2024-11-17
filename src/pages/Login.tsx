@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Mail, X } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 
 export function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -24,7 +24,7 @@ export function Login() {
           >
             NotesNeo
           </Link>
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white">
+          <h2 className="mt-4 text-3xl font-extrabold text-gray-900 dark:text-white">
             {isLogin ? 'Welcome back!' : 'Create your account'}
           </h2>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
@@ -71,14 +71,6 @@ export function Login() {
           >
             <Github className="h-5 w-5 mr-2" />
             Continue with GitHub
-          </button>
-
-          <button
-            type="button"
-            className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
-          >
-            <X className="h-5 w-5 mr-2" />
-            Continue with X (Twitter)
           </button>
         </div>
 
@@ -129,7 +121,7 @@ export function Login() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="appearance-none relative block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm bg-white dark:bg-gray-700"
+                className="appearance-none relative block w-full pl-10 px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm bg-white dark:bg-gray-700"
                 placeholder="Password"
               />
             </div>

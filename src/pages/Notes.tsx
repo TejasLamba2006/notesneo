@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Book, GraduationCap, ScrollText } from 'lucide-react';
 import { NoteCard } from '../components/NoteCard';
 import { FilterBar } from '../components/FilterBar';
+import { useFavorites } from '../context/FavoritesContext';
 import type { Note } from '../types';
 
 export function Notes() {
@@ -9,6 +10,15 @@ export function Notes() {
   const [selectedBranch, setSelectedBranch] = useState('');
   const [selectedSemester, setSelectedSemester] = useState<number | null>(null);
   const [selectedSubject, setSelectedSubject] = useState('');
+  const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
+
+  const handleSave = (note: Note) => {
+    if (isFavorite(note.id)) {
+      removeFromFavorites(note.id);
+    } else {
+      addToFavorites(note);
+    }
+  };
 
   // Filter notes based on all criteria
   const filteredNotes = notes.filter((note) => {
@@ -134,8 +144,8 @@ export function Notes() {
                 <div key={note.id} data-aos="fade-up" data-aos-delay={index * 100}>
                   <NoteCard
                     note={note}
-                    onSave={() => { }}
-                    isSaved={false}
+                    onSave={() => handleSave(note)}
+                    isSaved={isFavorite(note.id)}
                   />
                 </div>
               ))}

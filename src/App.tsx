@@ -9,6 +9,8 @@ import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Notes } from './pages/Notes';
+import { Favorites } from './pages/Favorites';
+import { FavoritesProvider } from './context/FavoritesContext';
 
 function ScrollToTopOnRouteChange() {
   const location = useLocation();
@@ -20,7 +22,6 @@ function ScrollToTopOnRouteChange() {
   return null;
 }
 
-
 function App() {
   useEffect(() => {
     AOS.init({
@@ -31,22 +32,25 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
-        <ScrollToTopOnRouteChange />
-        <Navbar />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/notes" element={<Notes />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
+    <FavoritesProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
+          <ScrollToTopOnRouteChange />
+          <Navbar />
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/favorites" element={<Favorites />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </FavoritesProvider>
   );
 }
 

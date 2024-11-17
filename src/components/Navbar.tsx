@@ -1,15 +1,16 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Heart } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
+import { useFavorites } from '../context/FavoritesContext';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Get current location (path)
+  const location = useLocation();
+  const { favorites } = useFavorites();
 
   const closeMenu = () => setIsOpen(false);
 
-  // Helper function to check if the link is active
   const isActive = (path: string) => location.pathname === path ? 'text-indigo-600 dark:text-indigo-400 font-semibold' : '';
 
   return (
@@ -38,6 +39,18 @@ export function Navbar() {
             <Link to="/contact" className={`nav-link font-semibold text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-base ${isActive('/contact')}`}>
               Contact
             </Link>
+            <Link 
+              to="/favorites" 
+              className={`nav-link font-semibold text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-base flex items-center gap-1 ${isActive('/favorites')}`}
+            >
+              <Heart className="w-4 h-4" />
+              <span>Favorites</span>
+              {favorites.length > 0 && (
+                <span className="ml-1 px-2 py-0.5 text-xs font-semibold rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400">
+                  {favorites.length}
+                </span>
+              )}
+            </Link>
             <ThemeToggle />
             <Link
               to="/login"
@@ -49,6 +62,17 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
+            <Link 
+              to="/favorites"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors relative"
+            >
+              <Heart className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              {favorites.length > 0 && (
+                <span className="absolute -top-1 -right-1 px-2 py-0.5 text-xs font-semibold rounded-full bg-indigo-600 text-white">
+                  {favorites.length}
+                </span>
+              )}
+            </Link>
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
