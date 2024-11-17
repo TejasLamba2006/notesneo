@@ -413,6 +413,52 @@ const notes: Note[] = [
     downloadUrl: 'https://docs.google.com/document/d/1rMk2uzaP_AumU1XW8zwzziQhhJ1ozzkaYNv8b-xFpQU/edit',
   },
 
+  // BTech Semester 5 - Computer Networks (CN)
+  {
+    id: 'cn301',
+    title: 'CN Unit 1',
+    description: 'Introduction to Computer Networks',
+    subject: 'Computer Networks',
+    branch: 'BTech',
+    semester: 5,
+    unit: 1,
+    imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
+    downloadUrl: 'https://docs.google.com/document/d/1UvPaah98Wjwr4Qywm0MJ6tsX3W62fCSdVebGyL4tcAs/',
+  },
+  {
+    id: 'cn302',
+    title: 'CN Unit 2',
+    description: 'Network Protocols and Devices',
+    subject: 'Computer Networks',
+    branch: 'BTech',
+    semester: 5,
+    unit: 2,
+    imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
+    downloadUrl: 'https://docs.google.com/document/d/13J1RaO6fPRR_K0SRTseOcJYg4V1gKkIAtTNakduj4_E/',
+  },
+  {
+    id: 'cn303',
+    title: 'CN Unit 3',
+    description: 'Routing Algorithms, Transport and Application Layer',
+    subject: 'Computer Networks',
+    branch: 'BTech',
+    semester: 5,
+    unit: 3,
+    imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
+    downloadUrl: 'https://docs.google.com/document/d/1zb29KftBpaXf68dLgIv1eGZk84KSD-stFjBI4vr4xIE/',
+  },
+  {
+    id: 'cn304',
+    title: 'CN Unit 4',
+    description: 'Congestion, QoS, LAN and Security',
+    subject: 'Computer Networks',
+    branch: 'BTech',
+    semester: 5,
+    unit: 4,
+    imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea',
+    downloadUrl: 'https://docs.google.com/document/d/1DeGtxmxgqw5E27ogkb5a5wFCzKptaUeEUwSJzHO0998/',
+  },
+
   // BCA Semester 1
   {
     id: 'prog101',
