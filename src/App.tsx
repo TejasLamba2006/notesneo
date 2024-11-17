@@ -11,6 +11,7 @@ import { Login } from './pages/Login';
 import { Notes } from './pages/Notes';
 import { Favorites } from './pages/Favorites';
 import { FavoritesProvider } from './context/FavoritesContext';
+import { Analytics } from "@vercel/analytics/react"
 
 function ScrollToTopOnRouteChange() {
   const location = useLocation();
@@ -49,6 +50,7 @@ function App() {
           </div>
           <Footer />
         </div>
+        <Analytics />
       </Router>
     </FavoritesProvider>
   );
