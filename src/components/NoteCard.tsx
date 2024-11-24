@@ -1,5 +1,5 @@
-import { Download } from 'lucide-react';
-import type { Note } from '../types';
+import { Download } from "lucide-react";
+import type { Note } from "../types";
 
 interface NoteCardProps {
   note: Note;
@@ -12,7 +12,7 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all transform hover:scale-[1.05] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-700 duration-300 ease-in-out">
       <img
         src={note.imageUrl}
-        alt={note.title}
+        alt={note.title || "Note image"}
         className="w-full h-100 object-cover rounded-t-xl"
       />
       <div className="p-5">
@@ -39,16 +39,17 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
         <div className="mt-6 flex justify-between items-center">
           {onSave && (
             <button
+              type="button"
               onClick={onSave}
               className={`p-2 rounded-full ${
                 isSaved
-                  ? 'bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300'
-                  : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
+                  ? "bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
               } hover:bg-pink-200 dark:hover:bg-pink-700 transition-colors duration-200 shadow-md hover:shadow-lg`}
             >
               <svg
                 className="w-5 h-5"
-                fill={isSaved ? 'currentColor' : 'none'}
+                fill={isSaved ? "currentColor" : "none"}
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -65,7 +66,8 @@ export function NoteCard({ note, onSave, isSaved }: NoteCardProps) {
             href={note.downloadUrl}
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg"
             // download
-            target="_blank" // open in new tab
+            target="_blank"
+            rel="noreferrer" // open in new tab
           >
             <Download className="w-4 h-4" />
             <span className="text-sm font-medium">Download</span>
